@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced gradient animations */
+.login-gradient {
+  background: linear-gradient(-45deg, #1DB954, #1ed760, #191414, #535353);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.home-gradient {
+  background: linear-gradient(-45deg, #450af5, #c4efd9, #1DB954, #191414);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+.gradient-animate {
+  background: linear-gradient(45deg, #1DB954, #1ed760, #1DB954);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.playlist-hover {
+  transition: all 0.3s ease;
+}
+
+.playlist-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Volume and Progress Bar Styles */
+.volume-slider {
+  position: relative;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: height 0.2s ease-in-out;
+}
+
+.volume-slider:hover {
+  height: 6px;
+}
+
+.volume-slider-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.volume-slider:hover .volume-slider-fill {
+  background: #1DB954;
+}
+
+.volume-slider-handle {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.volume-slider:hover .volume-slider-handle {
+  opacity: 1;
+}
+
+/* Lyrics Animation */
+@keyframes lyricsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lyrics-animate {
+  animation: lyricsFadeIn 0.3s ease-out forwards;
+}
+
+/* Recommendation Panel Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Music card hover effects */
+.music-card {
+  transition: all 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
